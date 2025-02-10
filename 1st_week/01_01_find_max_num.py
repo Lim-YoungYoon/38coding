@@ -1,21 +1,10 @@
 def find_max_num(array):
-    max_number = array[0]
+    max_num = array[0]
+    for i in array:
+        if i > max_num:
+            max_num = i
 
-    for number in array:
-        if number > max_number:
-            max_number = number
-
-    return max_number
-
-# def find_max_num(array):
-#     for number in array:
-#         is_max_num = True
-#         for compare_number in array :
-#             if number < compare_number:
-#                 is_max_num = False
-
-#         if is_max_num:
-#             return number
+    return max_num
 
 
 print("정답 = 6 / 현재 풀이 값 = ", find_max_num([3, 5, 6, 1, 2, 4]))

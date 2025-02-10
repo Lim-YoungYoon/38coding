@@ -1,22 +1,20 @@
 def find_max_occurred_alphabet(string):
-    # 이 부분을 채워보세요!
-
-    alphabet_array = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"]
-
+    
+    alphabet_array = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     max_occurrence = 0
     max_alphabet = alphabet_array[0]
 
     for alphabet in alphabet_array:
-        occurence = 0
-
+        occurrence = 0
         for char in string:
-            if char == alphabet:
-                occurence = occurence + 1
-        
-    return "a"
+            if alphabet == char:
+                occurrence += 1
+        if occurrence > max_occurrence:
+            max_alphabet = alphabet
+            max_occurrence = occurrence
+    
+    return max_alphabet
 
-# 1. a, b, c 처럼 문자가 해당 문자열에 얼마나 있는지 파악하고, 그 개수가 가장 크다면 반환해줘야 하는 값을 그 알파벳으로 변환한다.
-# a -> hello my name is dingcodingco ->  0 max_occurence = 
 
 
 result = find_max_occurred_alphabet
